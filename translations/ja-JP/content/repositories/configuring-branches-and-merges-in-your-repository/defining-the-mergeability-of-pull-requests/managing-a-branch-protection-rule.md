@@ -63,7 +63,7 @@ For more information about each of the available branch protection settings, see
    - コードを変更するコミットがブランチにプッシュされたときにプルリクエストの承認レビューを却下する場合は、[**Dismiss stale pull request approvals when new commits are pushed**] を選択します。 ![新たなコミットがチェックボックスにプッシュされた際に古いプルリクエストの承認を却下するチェックボックス](/assets/images/help/repository/PR-reviews-required-dismiss-stale.png)
    - 指定されたオーナーのコードにプルリクエストが影響する場合に、コードオーナーからのレビューを必須にする場合は、[**Require review from Code Owners**] を選択します。 詳細は「[コードオーナーについて](/github/creating-cloning-and-archiving-repositories/about-code-owners)」を参照してください。 ![コードオーナーのレビューを必要とする](/assets/images/help/repository/PR-review-required-code-owner.png)
 {% ifversion fpt or ghec or ghes > 3.3 or ghae-issue-5611 %}
-   - Optionally, to allow specific people or teams to push code to the branch without being subject to the pull request rules above, select **Allow specific actors to bypass pull request requirements**. Then, search for and select the people or teams who are allowed to bypass the pull request requirements. ![Allow specific actors to bypass pull request requirements checkbox](/assets/images/help/repository/PR-bypass-requirements.png)
+   - Optionally, to allow specific people or teams to push code to the branch without creating pull requests when they're required, select **Allow specific actors to bypass required pull requests**. Then, search for and select the people or teams who should be allowed to skip creating a pull request. ![Allow specific actors to bypass pull request requirements checkbox](/assets/images/help/repository/PR-bypass-requirements.png)
 {% endif %}
    - リポジトリが Organization の一部である場合、[**Restrict who can dismiss pull request reviews**] を選択します。 そして、Pull Requestレビューを却下できるユーザまたは Team を検索して選択します。 詳しい情報については[プルリクエストレビューの却下](/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/dismissing-a-pull-request-review)を参照してください。 ![[Restrict who can dismiss pull request reviews] チェックボックス](/assets/images/help/repository/PR-review-required-dismissals.png)
 1. 必要に応じて、ステータスチェック必須を有効化します。 詳しい情報については[ステータスチェックについて](/pull-requests/collaborating-with-pull-requests/collaborating-on-repositories-with-code-quality-features/about-status-checks)を参照してください。
@@ -82,6 +82,9 @@ For more information about each of the available branch protection settings, see
   **Tip:** The pull request merge queue feature is currently in limited public beta and subject to change. Organizations owners can request early access to the beta by joining the [waitlist](https://github.com/features/merge-queue/signup).
 
   {% endtip %}
+{%- endif %}
+{%- if required-deployments %}
+1. Optionally, to choose which environments the changes must be successfully deployed to before merging, select **Require deployments to succeed before merging**, then select the environments. ![Require successful deployment option](/assets/images/help/repository/require-successful-deployment.png)
 {%- endif %}
 1. Optionally, select **Apply the rules above to administrators**. ![Apply the rules above to administrators checkbox](/assets/images/help/repository/include-admins-protected-branches.png)
 1. 必要に応じて、{% ifversion fpt or ghec %}{% data variables.product.prodname_team %} または {% data variables.product.prodname_ghe_cloud %} を使用する Organization がリポジトリを所有している場合には、{% endif %}ブランチ制限を有効化します。

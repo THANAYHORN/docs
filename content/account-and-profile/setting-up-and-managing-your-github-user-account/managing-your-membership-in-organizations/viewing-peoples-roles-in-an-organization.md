@@ -1,7 +1,7 @@
 ---
 title: Viewing people's roles in an organization
 intro: 'You can view a list of the people in your organization and filter by their role. For more information on organization roles, see "[Roles in an organization](/organizations/managing-peoples-access-to-your-organization-with-roles/roles-in-an-organization)."'
-permissions: "Organization members can see people's roles in the organization."
+permissions: Organization members can see people's roles in the organization.
 redirect_from:
   - /articles/viewing-people-s-roles-in-an-organization
   - /articles/viewing-peoples-roles-in-an-organization
@@ -36,7 +36,7 @@ If your organization uses {% data variables.product.prodname_ghe_cloud %}, you c
 
 If your organization is managed by an enterprise account, then you can view the enterprise owners who manage billing settings and policies for all of your enterprise's organizations. For more information about enterprise accounts, see "[Types of {% data variables.product.prodname_dotcom %} accounts](/get-started/learning-about-github/types-of-github-accounts)."
 
-You can also view whether an enterprise owner has a specific role in the organization. Enterprise owners can also be an organization member, any other organization role, or be un-affililated with the organization.
+You can also view whether an enterprise owner has a specific role in the organization. Enterprise owners can also be an organization member, any other organization role, or be un-affiliated with the organization.
 
 {% note %}
 
@@ -46,7 +46,7 @@ You can also view whether an enterprise owner has a specific role in the organiz
 
 | **Enterprise role** | **Organization role** | **Organization access or impact** |
 |----|----|----|----|
-| Enterprise owner | Un-affililated or no official organization role | Cannot access organization content or repositories but manages enterprise settings and policies that impact your organization. |
+| Enterprise owner | Un-affiliated or no official organization role | Cannot access organization content or repositories but manages enterprise settings and policies that impact your organization. |
 | Enterprise owner | Organization owner | Able to configure organization settings and manage access to the organization's resources through teams, etc. | 
 | Enterprise owner | Organization member | Able to access organization resources and content, such as repositories, without access to the organization's settings. |
 
